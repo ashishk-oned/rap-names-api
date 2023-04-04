@@ -5,6 +5,10 @@ const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
+app.use((request, response, next) => {
+    response.set('X-Content-Type-Options', 'nosniff');
+    next();
+  });
 
 // let rappers = {
 //     '21 savage': {
