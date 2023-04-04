@@ -6,7 +6,7 @@ const PORT = 8000
 
 app.use(cors())
 const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'js')))
+app.use('/js', express.static(path.join(__dirname, 'js')))
 
 // let rappers = {
 //     '21 savage': {
